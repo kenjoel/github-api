@@ -1,1 +1,19 @@
-<p>repos works!</p>
+<div class="container">
+    <form class="form-inline">
+        Search Repository:<input class="form-control" type="search" name="repoName" (keyup)="searchRepository()" #name="ngModel" [(ngModel)] ="repoName" ngDefaultControl>
+    </form>
+</div>
+<div class="container" #name="ngModel" [(ngModel)]="repos" ngDefaultControl>
+    <ng-progress></ng-progress>
+    <div class="row" *ngFor="let repo of repos">
+        <div class="col-md-12">
+            <ul class="list-group">
+                <h3 class="text-white">{{repo.name}}</h3>
+                <li class="list-group-item"><strong>Owner: </strong> {{repo.full_name}}</li>
+                <li class="list-group-item"><strong>Description: </strong> {{repo.description}}</li>
+                <li class="list-group-item"><strong>Created on: </strong> {{repo.created_at|date}}</li>
+                <li class="list-group-item"><strong>Url:</strong> {{repo.git_url}}</li> 
+            </ul>
+        </div>
+    </div>
+</div>
