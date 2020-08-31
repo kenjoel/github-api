@@ -1,0 +1,10 @@
+.nav-item{
+    color: aliceblue;
+}
+
+@media(min-width:568){
+    .nav{
+        justify-content: center;
+    }
+
+}
