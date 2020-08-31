@@ -26,7 +26,7 @@ import { LandingComponent } from './landing/landing.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    NgProgressModule.forRoot(),
+    NgProgressModule,
     NgProgressHttpClientModule
   ],
   providers: [],
