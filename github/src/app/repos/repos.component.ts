@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoadService } from '../load.service';
 
 @Component({
   selector: 'app-repos',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReposComponent implements OnInit {
 
-  constructor() { }
+  repos:any[];
+  repoName: string = "jQuery";
 
-  ngOnInit(): void {
+  searchRepository(){
+    this.service.repositorysearch(this.repoName)
+    this.service.searchRepo().subscribe(obj =>{
+      this.repos = obj['items']
+      console.log(this.repos)
+    })
+  }
+
+
+  constructor(private service:LoadService) { }
+
+  ngOnInit(){
+    this.searchRepository()
   }
 
 }
