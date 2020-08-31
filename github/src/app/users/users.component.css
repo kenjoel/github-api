@@ -1,0 +1,11 @@
+#repos{
+    background-color: darkslategrey;
+}
+
+@media(min-width:568){
+    .stats{
+        justify-content: center;
+        display: block;
+    }
+
+}
