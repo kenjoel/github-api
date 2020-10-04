@@ -5,7 +5,7 @@
 </div>
 <div class="container" #name="ngModel" [(ngModel)]="repos" ngDefaultControl>
     <div class="row" *ngFor="let repo of repos">
-        <div class="col-md-12">
+        <div class="col col-md-12 col-sm-8">
             <ul class="list-group">
                 <h3 class="text-white">{{repo.name}}</h3>
                 <li class="list-group-item"><strong>Owner: </strong> {{repo.full_name}}</li>
